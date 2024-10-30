@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>Home</h1>
+    <ol>
+      <% messages.forEach((message, index) => { %>
+        <li>
+          <%- include('messages/message', {message: message}); %>
+        </li>
+        <a href="message/<%= index %>">Open</a>
+      <% }) %>
+    </ol>
+    <a href="new">Add new</a>
+  </body>
+</html>
